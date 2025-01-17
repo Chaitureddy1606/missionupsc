@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+ <header>
+    <style>
+        nav {
+            font-family: 'Arial', sans-serif;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            float: left;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 18px 24px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav li a:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+        }
+
+        nav li a:hover:before {
+            transform: translateX(0);
+        }
+
+        nav li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            color: #ecf0f1;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        nav li.active a {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        nav li:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        nav li:active {
+            animation: pulse 0.3s ease-in-out;
+        }
+
+        nav li a:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 100%;
+            background: rgba(255,255,255,0.1);
+            transition: all 0.4s ease;
+            transform: skewX(-20deg);
+            z-index: -1;
+        }
+
+        nav li a:hover:after {
+            width: 100%;
+            left: 0;
+            transform: skewX(-20deg);
+        }
+    </style>
+    <nav>
+
+    <ul>
+        <li><a href="home.html"> Home</a></li>
+        <li><a href="courses.html"> Courses</a></li>
+        <li><a href="contact.html"> Contact</a></li>
+        <li><a href="education.html"> Education</a></li>
+    </ul>
+    </nav>
+
+ </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
